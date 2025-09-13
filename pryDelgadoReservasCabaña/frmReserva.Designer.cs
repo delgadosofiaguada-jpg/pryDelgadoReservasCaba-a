@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblTituloTipo = new Label();
             lblPersonas = new Label();
             lblDias = new Label();
             lblTipoCabaña = new Label();
             lstTipo = new ComboBox();
             lstPersonas = new ComboBox();
             mskDias = new MaskedTextBox();
-            lblFormaPago = new Label();
-            lblAdicionales = new Label();
             ckbCocina = new CheckBox();
             ckbHeladera = new CheckBox();
             ckbTelevisor = new CheckBox();
@@ -44,7 +41,6 @@
             rbTarjeta = new RadioButton();
             lblTarjetas = new Label();
             lstTarjetas = new ComboBox();
-            lblTitularReserva = new Label();
             txtNombre = new TextBox();
             lblNombre = new Label();
             label2 = new Label();
@@ -52,17 +48,12 @@
             cmdReservar = new Button();
             cmdCancelar = new Button();
             lstbResultado = new ListBox();
+            gbTipo = new GroupBox();
+            groupBox1 = new GroupBox();
+            gbFormaPago = new GroupBox();
+            groupBox2 = new GroupBox();
+            gbFormaPago.SuspendLayout();
             SuspendLayout();
-            // 
-            // lblTituloTipo
-            // 
-            lblTituloTipo.AutoSize = true;
-            lblTituloTipo.Font = new Font("Segoe UI", 10.8F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblTituloTipo.Location = new Point(38, 9);
-            lblTituloTipo.Name = "lblTituloTipo";
-            lblTituloTipo.Size = new Size(137, 25);
-            lblTituloTipo.TabIndex = 1;
-            lblTituloTipo.Text = "Tipo de Cabaña";
             // 
             // lblPersonas
             // 
@@ -124,26 +115,6 @@
             mskDias.TabIndex = 7;
             mskDias.ValidatingType = typeof(int);
             // 
-            // lblFormaPago
-            // 
-            lblFormaPago.AutoSize = true;
-            lblFormaPago.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblFormaPago.Location = new Point(337, 196);
-            lblFormaPago.Name = "lblFormaPago";
-            lblFormaPago.Size = new Size(120, 23);
-            lblFormaPago.TabIndex = 8;
-            lblFormaPago.Text = "Forma de pago";
-            // 
-            // lblAdicionales
-            // 
-            lblAdicionales.AutoSize = true;
-            lblAdicionales.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblAdicionales.Location = new Point(38, 196);
-            lblAdicionales.Name = "lblAdicionales";
-            lblAdicionales.Size = new Size(92, 23);
-            lblAdicionales.TabIndex = 9;
-            lblAdicionales.Text = "Adicionales";
-            // 
             // ckbCocina
             // 
             ckbCocina.AutoSize = true;
@@ -154,6 +125,7 @@
             ckbCocina.TabIndex = 10;
             ckbCocina.Text = "Cocina";
             ckbCocina.UseVisualStyleBackColor = true;
+            ckbCocina.CheckedChanged += ckbCocina_CheckedChanged;
             // 
             // ckbHeladera
             // 
@@ -165,6 +137,7 @@
             ckbHeladera.TabIndex = 11;
             ckbHeladera.Text = "Heladera";
             ckbHeladera.UseVisualStyleBackColor = true;
+            ckbHeladera.CheckedChanged += ckbHeladera_CheckedChanged;
             // 
             // ckbTelevisor
             // 
@@ -175,6 +148,7 @@
             ckbTelevisor.TabIndex = 12;
             ckbTelevisor.Text = "Televisor";
             ckbTelevisor.UseVisualStyleBackColor = true;
+            ckbTelevisor.CheckedChanged += ckbTelevisor_CheckedChanged;
             // 
             // rbEfectivo
             // 
@@ -188,6 +162,7 @@
             rbEfectivo.TabStop = true;
             rbEfectivo.Text = "Efectivo";
             rbEfectivo.UseVisualStyleBackColor = true;
+            rbEfectivo.CheckedChanged += rbEfectivo_CheckedChanged;
             // 
             // rbTarjeta
             // 
@@ -199,6 +174,7 @@
             rbTarjeta.TabIndex = 14;
             rbTarjeta.Text = "Tarjeta";
             rbTarjeta.UseVisualStyleBackColor = true;
+            rbTarjeta.CheckedChanged += rbTarjeta_CheckedChanged;
             // 
             // lblTarjetas
             // 
@@ -215,20 +191,10 @@
             lstTarjetas.Enabled = false;
             lstTarjetas.FormattingEnabled = true;
             lstTarjetas.Items.AddRange(new object[] { "Card Red", "Card Green", "Card Blue" });
-            lstTarjetas.Location = new Point(596, 321);
+            lstTarjetas.Location = new Point(283, 102);
             lstTarjetas.Name = "lstTarjetas";
-            lstTarjetas.Size = new Size(151, 28);
+            lstTarjetas.Size = new Size(151, 31);
             lstTarjetas.TabIndex = 16;
-            // 
-            // lblTitularReserva
-            // 
-            lblTitularReserva.AutoSize = true;
-            lblTitularReserva.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblTitularReserva.Location = new Point(38, 372);
-            lblTitularReserva.Name = "lblTitularReserva";
-            lblTitularReserva.Size = new Size(158, 23);
-            lblTitularReserva.TabIndex = 17;
-            lblTitularReserva.Text = "Titular de la Reserva";
             // 
             // txtNombre
             // 
@@ -275,6 +241,7 @@
             cmdReservar.TabIndex = 23;
             cmdReservar.Text = "Reservar";
             cmdReservar.UseVisualStyleBackColor = true;
+            cmdReservar.Click += cmdReservar_Click;
             // 
             // cmdCancelar
             // 
@@ -296,11 +263,53 @@
             lstbResultado.Size = new Size(504, 142);
             lstbResultado.TabIndex = 25;
             // 
+            // gbTipo
+            // 
+            gbTipo.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            gbTipo.Location = new Point(12, 37);
+            gbTipo.Name = "gbTipo";
+            gbTipo.Size = new Size(821, 156);
+            gbTipo.TabIndex = 26;
+            gbTipo.TabStop = false;
+            gbTipo.Text = "Tipo de Cabaña";
+            // 
+            // groupBox1
+            // 
+            groupBox1.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            groupBox1.Location = new Point(12, 213);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(208, 136);
+            groupBox1.TabIndex = 27;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Adicionales";
+            // 
+            // gbFormaPago
+            // 
+            gbFormaPago.Controls.Add(lstTarjetas);
+            gbFormaPago.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            gbFormaPago.Location = new Point(313, 213);
+            gbFormaPago.Name = "gbFormaPago";
+            gbFormaPago.Size = new Size(520, 136);
+            gbFormaPago.TabIndex = 28;
+            gbFormaPago.TabStop = false;
+            gbFormaPago.Text = "Forma de Pago";
+            // 
+            // groupBox2
+            // 
+            groupBox2.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            groupBox2.Location = new Point(21, 399);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(400, 136);
+            groupBox2.TabIndex = 28;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Titular de la Reserva";
+            // 
             // frmReserva
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1070, 768);
+            ClientSize = new Size(959, 768);
+            Controls.Add(rbEfectivo);
             Controls.Add(lstbResultado);
             Controls.Add(cmdCancelar);
             Controls.Add(cmdReservar);
@@ -308,40 +317,36 @@
             Controls.Add(label2);
             Controls.Add(lblNombre);
             Controls.Add(txtNombre);
-            Controls.Add(lblTitularReserva);
-            Controls.Add(lstTarjetas);
             Controls.Add(lblTarjetas);
             Controls.Add(rbTarjeta);
-            Controls.Add(rbEfectivo);
             Controls.Add(ckbTelevisor);
             Controls.Add(ckbHeladera);
             Controls.Add(ckbCocina);
-            Controls.Add(lblAdicionales);
-            Controls.Add(lblFormaPago);
             Controls.Add(mskDias);
             Controls.Add(lstPersonas);
             Controls.Add(lstTipo);
             Controls.Add(lblTipoCabaña);
             Controls.Add(lblDias);
             Controls.Add(lblPersonas);
-            Controls.Add(lblTituloTipo);
+            Controls.Add(gbTipo);
+            Controls.Add(groupBox1);
+            Controls.Add(gbFormaPago);
+            Controls.Add(groupBox2);
             Name = "frmReserva";
             Text = "Reservas de Cabañas";
             Load += frmReserva_Load;
+            gbFormaPago.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Label lblTituloTipo;
         private Label lblPersonas;
         private Label lblDias;
         private Label lblTipoCabaña;
         private ComboBox lstTipo;
         private ComboBox lstPersonas;
         private MaskedTextBox mskDias;
-        private Label lblFormaPago;
-        private Label lblAdicionales;
         private CheckBox ckbCocina;
         private CheckBox ckbHeladera;
         private CheckBox ckbTelevisor;
@@ -349,7 +354,6 @@
         private RadioButton rbTarjeta;
         private Label lblTarjetas;
         private ComboBox lstTarjetas;
-        private Label lblTitularReserva;
         private TextBox txtNombre;
         private Label lblNombre;
         private Label label2;
@@ -357,5 +361,9 @@
         private Button cmdReservar;
         private Button cmdCancelar;
         private ListBox lstbResultado;
+        private GroupBox gbTipo;
+        private GroupBox groupBox1;
+        private GroupBox gbFormaPago;
+        private GroupBox groupBox2;
     }
 }
