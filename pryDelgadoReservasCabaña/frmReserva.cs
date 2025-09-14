@@ -1,3 +1,5 @@
+using System.Diagnostics.Eventing.Reader;
+
 namespace pryDelgadoReservasCabaña
 {
     public partial class frmReserva : Form
@@ -7,22 +9,38 @@ namespace pryDelgadoReservasCabaña
             InitializeComponent();
         }
         int costo = 0;
+
         private void frmReserva_Load(object sender, EventArgs e)
         {
             if (mskDias.Text == "")
             {
-                if (txtNombre.Text == "")
-                {
-                    if (mskNumero.Text == "")
-                    {
-                        cmdReservar.Enabled = false;
-                    }
-                }
+                cmdReservar.Enabled = false;
             }
             else
             {
                 cmdReservar.Enabled = true;
             }
+            if (txtNombre.Text == "")
+            {
+                cmdReservar.Enabled = false;
+            }
+            else
+            {
+                cmdReservar.Enabled = true;
+            }
+            if (mskNumero.Text == "")
+            {
+                cmdReservar.Enabled = false;
+            }
+            else
+            {
+                cmdReservar.Enabled = true;
+            }
+        }
+
+        private void lstTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void rbTarjeta_CheckedChanged(object sender, EventArgs e)
@@ -69,9 +87,20 @@ namespace pryDelgadoReservasCabaña
             txtNombre.Text = "";
             mskNumero.Text = "";
         }
+        private void FormatoInicio()
+        {
+
+        }
         private void cmdReservar_Click(object sender, EventArgs e)
         {
             LimpiarControles();
+            FormatoInicio();
+        }
+
+        private void cmdCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarControles();
+            FormatoInicio();
         }
     }
 }

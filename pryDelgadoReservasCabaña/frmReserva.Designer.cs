@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReserva));
             lblPersonas = new Label();
             lblDias = new Label();
             lblTipoCabaña = new Label();
@@ -96,6 +97,7 @@
             lstTipo.Size = new Size(151, 28);
             lstTipo.TabIndex = 5;
             lstTipo.Tag = "";
+            lstTipo.SelectedIndexChanged += lstTipo_SelectedIndexChanged;
             // 
             // lstPersonas
             // 
@@ -195,6 +197,7 @@
             lstTarjetas.Name = "lstTarjetas";
             lstTarjetas.Size = new Size(151, 31);
             lstTarjetas.TabIndex = 16;
+            lstTarjetas.SelectedIndexChanged += lstTarjetas_SelectedIndexChanged;
             // 
             // txtNombre
             // 
@@ -252,6 +255,7 @@
             cmdCancelar.TabIndex = 24;
             cmdCancelar.Text = "Cancelar";
             cmdCancelar.UseVisualStyleBackColor = true;
+            cmdCancelar.Click += cmdCancelar_Click;
             // 
             // lstbResultado
             // 
@@ -332,6 +336,7 @@
             Controls.Add(groupBox1);
             Controls.Add(gbFormaPago);
             Controls.Add(groupBox2);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmReserva";
             Text = "Reservas de Cabañas";
             Load += frmReserva_Load;
