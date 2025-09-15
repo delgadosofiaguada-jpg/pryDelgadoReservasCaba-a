@@ -60,9 +60,9 @@
             // 
             lblPersonas.AutoSize = true;
             lblPersonas.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPersonas.Location = new Point(300, 64);
+            lblPersonas.Location = new Point(262, 48);
             lblPersonas.Name = "lblPersonas";
-            lblPersonas.Size = new Size(77, 23);
+            lblPersonas.Size = new Size(63, 19);
             lblPersonas.TabIndex = 2;
             lblPersonas.Text = "Personas";
             // 
@@ -70,9 +70,9 @@
             // 
             lblDias.AutoSize = true;
             lblDias.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDias.Location = new Point(555, 64);
+            lblDias.Location = new Point(486, 48);
             lblDias.Name = "lblDias";
-            lblDias.Size = new Size(42, 23);
+            lblDias.Size = new Size(35, 19);
             lblDias.TabIndex = 3;
             lblDias.Text = "Días";
             // 
@@ -80,9 +80,9 @@
             // 
             lblTipoCabaña.AutoSize = true;
             lblTipoCabaña.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTipoCabaña.Location = new Point(38, 64);
+            lblTipoCabaña.Location = new Point(33, 48);
             lblTipoCabaña.Name = "lblTipoCabaña";
-            lblTipoCabaña.Size = new Size(43, 23);
+            lblTipoCabaña.Size = new Size(35, 19);
             lblTipoCabaña.TabIndex = 4;
             lblTipoCabaña.Text = "Tipo";
             // 
@@ -92,9 +92,10 @@
             lstTipo.AutoCompleteSource = AutoCompleteSource.FileSystem;
             lstTipo.FormattingEnabled = true;
             lstTipo.Items.AddRange(new object[] { "A", "B" });
-            lstTipo.Location = new Point(38, 122);
+            lstTipo.Location = new Point(33, 92);
+            lstTipo.Margin = new Padding(3, 2, 3, 2);
             lstTipo.Name = "lstTipo";
-            lstTipo.Size = new Size(151, 28);
+            lstTipo.Size = new Size(133, 23);
             lstTipo.TabIndex = 5;
             lstTipo.Tag = "";
             lstTipo.SelectedIndexChanged += lstTipo_SelectedIndexChanged;
@@ -103,17 +104,19 @@
             // 
             lstPersonas.FormattingEnabled = true;
             lstPersonas.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8" });
-            lstPersonas.Location = new Point(300, 123);
+            lstPersonas.Location = new Point(262, 92);
+            lstPersonas.Margin = new Padding(3, 2, 3, 2);
             lstPersonas.Name = "lstPersonas";
-            lstPersonas.Size = new Size(151, 28);
+            lstPersonas.Size = new Size(133, 23);
             lstPersonas.TabIndex = 6;
             // 
             // mskDias
             // 
-            mskDias.Location = new Point(555, 124);
+            mskDias.Location = new Point(486, 93);
+            mskDias.Margin = new Padding(3, 2, 3, 2);
             mskDias.Mask = "999";
             mskDias.Name = "mskDias";
-            mskDias.Size = new Size(125, 27);
+            mskDias.Size = new Size(110, 23);
             mskDias.TabIndex = 7;
             mskDias.ValidatingType = typeof(int);
             // 
@@ -121,9 +124,10 @@
             // 
             ckbCocina.AutoSize = true;
             ckbCocina.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ckbCocina.Location = new Point(41, 245);
+            ckbCocina.Location = new Point(36, 184);
+            ckbCocina.Margin = new Padding(3, 2, 3, 2);
             ckbCocina.Name = "ckbCocina";
-            ckbCocina.Size = new Size(84, 27);
+            ckbCocina.Size = new Size(69, 23);
             ckbCocina.TabIndex = 10;
             ckbCocina.Text = "Cocina";
             ckbCocina.UseVisualStyleBackColor = true;
@@ -133,9 +137,10 @@
             // 
             ckbHeladera.AutoSize = true;
             ckbHeladera.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ckbHeladera.Location = new Point(41, 278);
+            ckbHeladera.Location = new Point(36, 208);
+            ckbHeladera.Margin = new Padding(3, 2, 3, 2);
             ckbHeladera.Name = "ckbHeladera";
-            ckbHeladera.Size = new Size(100, 27);
+            ckbHeladera.Size = new Size(82, 23);
             ckbHeladera.TabIndex = 11;
             ckbHeladera.Text = "Heladera";
             ckbHeladera.UseVisualStyleBackColor = true;
@@ -144,9 +149,10 @@
             // ckbTelevisor
             // 
             ckbTelevisor.AutoSize = true;
-            ckbTelevisor.Location = new Point(41, 311);
+            ckbTelevisor.Location = new Point(36, 233);
+            ckbTelevisor.Margin = new Padding(3, 2, 3, 2);
             ckbTelevisor.Name = "ckbTelevisor";
-            ckbTelevisor.Size = new Size(89, 24);
+            ckbTelevisor.Size = new Size(71, 19);
             ckbTelevisor.TabIndex = 12;
             ckbTelevisor.Text = "Televisor";
             ckbTelevisor.UseVisualStyleBackColor = true;
@@ -157,9 +163,10 @@
             rbEfectivo.AutoSize = true;
             rbEfectivo.Checked = true;
             rbEfectivo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            rbEfectivo.Location = new Point(340, 246);
+            rbEfectivo.Location = new Point(298, 184);
+            rbEfectivo.Margin = new Padding(3, 2, 3, 2);
             rbEfectivo.Name = "rbEfectivo";
-            rbEfectivo.Size = new Size(90, 27);
+            rbEfectivo.Size = new Size(74, 23);
             rbEfectivo.TabIndex = 13;
             rbEfectivo.TabStop = true;
             rbEfectivo.Text = "Efectivo";
@@ -170,9 +177,10 @@
             // 
             rbTarjeta.AutoSize = true;
             rbTarjeta.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            rbTarjeta.Location = new Point(340, 279);
+            rbTarjeta.Location = new Point(298, 209);
+            rbTarjeta.Margin = new Padding(3, 2, 3, 2);
             rbTarjeta.Name = "rbTarjeta";
-            rbTarjeta.Size = new Size(81, 27);
+            rbTarjeta.Size = new Size(66, 23);
             rbTarjeta.TabIndex = 14;
             rbTarjeta.Text = "Tarjeta";
             rbTarjeta.UseVisualStyleBackColor = true;
@@ -182,9 +190,9 @@
             // 
             lblTarjetas.AutoSize = true;
             lblTarjetas.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblTarjetas.Location = new Point(596, 283);
+            lblTarjetas.Location = new Point(522, 212);
             lblTarjetas.Name = "lblTarjetas";
-            lblTarjetas.Size = new Size(68, 23);
+            lblTarjetas.Size = new Size(58, 19);
             lblTarjetas.TabIndex = 15;
             lblTarjetas.Text = "Tarjetas";
             // 
@@ -193,26 +201,27 @@
             lstTarjetas.Enabled = false;
             lstTarjetas.FormattingEnabled = true;
             lstTarjetas.Items.AddRange(new object[] { "Card Red", "Card Green", "Card Blue" });
-            lstTarjetas.Location = new Point(283, 102);
+            lstTarjetas.Location = new Point(248, 76);
+            lstTarjetas.Margin = new Padding(3, 2, 3, 2);
             lstTarjetas.Name = "lstTarjetas";
-            lstTarjetas.Size = new Size(151, 31);
+            lstTarjetas.Size = new Size(133, 27);
             lstTarjetas.TabIndex = 16;
-            lstTarjetas.SelectedIndexChanged += lstTarjetas_SelectedIndexChanged;
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(149, 433);
+            txtNombre.Location = new Point(130, 325);
+            txtNombre.Margin = new Padding(3, 2, 3, 2);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(220, 27);
+            txtNombre.Size = new Size(193, 23);
             txtNombre.TabIndex = 18;
             // 
             // lblNombre
             // 
             lblNombre.AutoSize = true;
             lblNombre.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNombre.Location = new Point(41, 437);
+            lblNombre.Location = new Point(36, 328);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(73, 23);
+            lblNombre.Size = new Size(59, 19);
             lblNombre.TabIndex = 20;
             lblNombre.Text = "Nombre";
             // 
@@ -220,27 +229,29 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(41, 495);
+            label2.Location = new Point(36, 371);
             label2.Name = "label2";
-            label2.Size = new Size(73, 23);
+            label2.Size = new Size(59, 19);
             label2.TabIndex = 21;
             label2.Text = "Numero";
             // 
             // mskNumero
             // 
-            mskNumero.Location = new Point(149, 492);
+            mskNumero.Location = new Point(130, 369);
+            mskNumero.Margin = new Padding(3, 2, 3, 2);
             mskNumero.Mask = "(351)000-0000";
             mskNumero.Name = "mskNumero";
-            mskNumero.Size = new Size(220, 27);
+            mskNumero.Size = new Size(193, 23);
             mskNumero.TabIndex = 22;
             // 
             // cmdReservar
             // 
             cmdReservar.Enabled = false;
             cmdReservar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cmdReservar.Location = new Point(552, 522);
+            cmdReservar.Location = new Point(483, 392);
+            cmdReservar.Margin = new Padding(3, 2, 3, 2);
             cmdReservar.Name = "cmdReservar";
-            cmdReservar.Size = new Size(154, 40);
+            cmdReservar.Size = new Size(135, 30);
             cmdReservar.TabIndex = 23;
             cmdReservar.Text = "Reservar";
             cmdReservar.UseVisualStyleBackColor = true;
@@ -249,9 +260,10 @@
             // cmdCancelar
             // 
             cmdCancelar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cmdCancelar.Location = new Point(735, 522);
+            cmdCancelar.Location = new Point(643, 392);
+            cmdCancelar.Margin = new Padding(3, 2, 3, 2);
             cmdCancelar.Name = "cmdCancelar";
-            cmdCancelar.Size = new Size(154, 40);
+            cmdCancelar.Size = new Size(135, 30);
             cmdCancelar.TabIndex = 24;
             cmdCancelar.Text = "Cancelar";
             cmdCancelar.UseVisualStyleBackColor = true;
@@ -261,18 +273,21 @@
             // 
             lstbResultado.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lstbResultado.FormattingEnabled = true;
-            lstbResultado.ItemHeight = 23;
-            lstbResultado.Location = new Point(41, 612);
+            lstbResultado.ItemHeight = 19;
+            lstbResultado.Location = new Point(36, 459);
+            lstbResultado.Margin = new Padding(3, 2, 3, 2);
             lstbResultado.Name = "lstbResultado";
-            lstbResultado.Size = new Size(504, 142);
+            lstbResultado.Size = new Size(442, 99);
             lstbResultado.TabIndex = 25;
             // 
             // gbTipo
             // 
             gbTipo.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            gbTipo.Location = new Point(12, 37);
+            gbTipo.Location = new Point(10, 28);
+            gbTipo.Margin = new Padding(3, 2, 3, 2);
             gbTipo.Name = "gbTipo";
-            gbTipo.Size = new Size(821, 156);
+            gbTipo.Padding = new Padding(3, 2, 3, 2);
+            gbTipo.Size = new Size(718, 117);
             gbTipo.TabIndex = 26;
             gbTipo.TabStop = false;
             gbTipo.Text = "Tipo de Cabaña";
@@ -280,9 +295,11 @@
             // groupBox1
             // 
             groupBox1.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(12, 213);
+            groupBox1.Location = new Point(10, 160);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(208, 136);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(182, 102);
             groupBox1.TabIndex = 27;
             groupBox1.TabStop = false;
             groupBox1.Text = "Adicionales";
@@ -291,9 +308,11 @@
             // 
             gbFormaPago.Controls.Add(lstTarjetas);
             gbFormaPago.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            gbFormaPago.Location = new Point(313, 213);
+            gbFormaPago.Location = new Point(274, 160);
+            gbFormaPago.Margin = new Padding(3, 2, 3, 2);
             gbFormaPago.Name = "gbFormaPago";
-            gbFormaPago.Size = new Size(520, 136);
+            gbFormaPago.Padding = new Padding(3, 2, 3, 2);
+            gbFormaPago.Size = new Size(455, 117);
             gbFormaPago.TabIndex = 28;
             gbFormaPago.TabStop = false;
             gbFormaPago.Text = "Forma de Pago";
@@ -301,18 +320,20 @@
             // groupBox2
             // 
             groupBox2.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            groupBox2.Location = new Point(21, 399);
+            groupBox2.Location = new Point(18, 299);
+            groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(400, 136);
+            groupBox2.Padding = new Padding(3, 2, 3, 2);
+            groupBox2.Size = new Size(350, 102);
             groupBox2.TabIndex = 28;
             groupBox2.TabStop = false;
             groupBox2.Text = "Titular de la Reserva";
             // 
             // frmReserva
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(959, 768);
+            ClientSize = new Size(839, 576);
             Controls.Add(rbEfectivo);
             Controls.Add(lstbResultado);
             Controls.Add(cmdCancelar);
@@ -337,6 +358,7 @@
             Controls.Add(gbFormaPago);
             Controls.Add(groupBox2);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmReserva";
             Text = "Reservas de Cabañas";
             Load += frmReserva_Load;
