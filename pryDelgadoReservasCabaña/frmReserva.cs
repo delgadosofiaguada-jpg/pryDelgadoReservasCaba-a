@@ -79,6 +79,7 @@ namespace pryDelgadoReservasCabaña
             ckbHeladera.Checked = false;
             ckbTelevisor.Checked = false;
             lstTarjetas.SelectedIndex = -1;
+            rbEfectivo.Checked = true;
             txtNombre.Text = "";
             mskNumero.Text = "";
         }

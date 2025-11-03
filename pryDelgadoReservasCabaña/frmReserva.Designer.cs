@@ -93,6 +93,7 @@
             // 
             cbxTipo.AutoCompleteCustomSource.AddRange(new string[] { "A" });
             cbxTipo.AutoCompleteSource = AutoCompleteSource.FileSystem;
+            cbxTipo.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxTipo.FormattingEnabled = true;
             cbxTipo.Items.AddRange(new object[] { "A", "B" });
             cbxTipo.Location = new Point(30, 68);
@@ -103,6 +104,7 @@
             // 
             // cbxPersonas
             // 
+            cbxPersonas.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxPersonas.FormattingEnabled = true;
             cbxPersonas.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8" });
             cbxPersonas.Location = new Point(288, 68);
@@ -180,6 +182,7 @@
             // 
             // lstTarjetas
             // 
+            lstTarjetas.DropDownStyle = ComboBoxStyle.DropDownList;
             lstTarjetas.Enabled = false;
             lstTarjetas.FormattingEnabled = true;
             lstTarjetas.Items.AddRange(new object[] { "Card Red", "Card Green", "Card Blue" });
@@ -253,7 +256,7 @@
             lstbResultado.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lstbResultado.FormattingEnabled = true;
             lstbResultado.ItemHeight = 23;
-            lstbResultado.Location = new Point(12, 535);
+            lstbResultado.Location = new Point(12, 522);
             lstbResultado.Name = "lstbResultado";
             lstbResultado.Size = new Size(516, 234);
             lstbResultado.TabIndex = 25;
@@ -339,6 +342,7 @@
             Controls.Add(groupBox2);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmReserva";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Reservas de Cabañas";
             Load += frmReserva_Load;
             gbTipo.ResumeLayout(false);
