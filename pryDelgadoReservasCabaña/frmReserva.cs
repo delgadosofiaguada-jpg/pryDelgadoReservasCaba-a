@@ -14,6 +14,25 @@ namespace pryDelgadoReservasCabaña
             FormatoInicio();
         }
 
+        struct RegistroCabaña
+        {
+            public string Nombre;
+            public string Telefono;
+            public string TipoCabaña;
+            public int Personas;
+            public int Dias;
+            public string Adicionales;
+            public string FormaPago;
+            public string Recargo;
+            public decimal PrecioDiario;
+            public decimal PrecioTotal;
+        }
+        private RegistroCabaña[] registros = new RegistroCabaña[20];
+        private int contador = 0;
+            
+    
+
+
         private void mtbDias_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             if (mtbDias.Text != "")
@@ -185,6 +204,22 @@ namespace pryDelgadoReservasCabaña
             lstbResultado.Items.Add("Recargo: " + RecargoSiNo);
             lstbResultado.Items.Add("Precio diario: U$S " + PrecioDiario);
             lstbResultado.Items.Add("Precio total: U$S " + PrecioFinal);
+
+            registros[contador] = new RegistroCabaña()
+            {
+                Nombre = txtNombre.Text,
+                Telefono = mskNumero.Text,
+                TipoCabaña = cbxTipo.SelectedItem.ToString(),
+                Personas = Personas,
+                Dias = Dias,
+                FormaPago = FormaPago,
+                Recargo = RecargoSiNo,
+                PrecioDiario = PrecioDiario,
+                PrecioTotal = PrecioFinal
+            };
+
+            contador++;
+
         }
     }
 }
